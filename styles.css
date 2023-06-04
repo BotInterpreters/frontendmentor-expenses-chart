@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+/* html {
+  height: 100vh;
+  width: 100%; 
+} */
+body {
+  background-color: #f7eadd;
+  height: 100%;
+  width: 100%; 
+}
+
+.balance-container {
+  background-color: #eb765d;
+  border-radius: 15px;
+  width: 580px;
+}
+
+.chart-container {
+  background-color: #fefcf6;
+  border-radius: 15px;
+  padding: 2rem;
+  width: 580px;
+  margin-top: 1rem    ;
+}
+
+.main-container {
+  width: 1200px;
+  margin: 6rem auto;
+}
+
+.graph-mon {
+  background-color: #eb765d;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 150px;
+}
+
+.graph-tues {
+  background-color: #eb765d;
+  height: 90px;
+  border-radius: 5px;
+  margin-top: 110px;
+}
+
+.graph-wed {
+  background-color: #76B5BC;
+  height: 150px;
+  border-radius: 5px;
+  margin-top: 25px;
+  transition: opacity 0.3s
+}
+
+.graph-wed:hover  {
+  opacity: 0.5; 
+  cursor: pointer;
+}
+
+.price-hover-wed {
+  background-color: hsl(25, 47%, 15%);
+  color: hsl(27, 66%, 92%);
+  font-family: 'DM Sans', sans-serif;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  transition: opacity 0.3s;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.graph-thur {
+  background-color: #eb765d;
+  height: 75px;
+  border-radius: 5px;
+  margin-top: 100px;
+  transition: opacity 0.3s
+}
+
+.graph-thur:hover  {
+  opacity: 0.5; 
+  cursor: pointer;
+}
+
+.price-hover-thur {
+  background-color: hsl(25, 47%, 15%);
+  color: hsl(27, 66%, 92%);
+  font-family: 'DM Sans', sans-serif;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  transition: opacity 0.3s;
+  top: 75px;
+  left: 0;
+  transform: translateX(-50%);
+  opacity: 0;
+  position: relative;
+} 
+
+
+.graph-fri {
+  background-color: #eb765d;
+  height: 60px;
+  border-radius: 5px;
+  margin-top: 140px;
+}
+
+.graph-sat {
+  background-color: #eb765d;
+  height: 100px;
+  border-radius: 5px;
+  margin-top: 100px;
+}
+
+.graph-sun {
+  background-color: #eb765d;
+  height: 60px;
+  border-radius: 5px;
+  margin-top: 140px;
+}
+
+.balance-header {
+  font-size: 16px;
+  color: hsl(27, 66%, 92%);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.balance-amount{
+  font-size: 24px;
+  color: hsl(33, 100%, 98%);
+  font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+
+}
+
+.span-day {
+  font-size: 12px;
+  color: hsl(28, 10%, 53%);
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.chart-heading {
+  font-size: 24px;
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+  margin-bottom: 0px;
+}
+
+.separation-line {
+  border: none; 
+  height: 2px; 
+  background-color:  hsl(27, 66%, 92%);
+  opacity: 1
+}
+
+.total-chart {
+  font-size: 12px;
+  color: hsl(28, 10%, 53%);
+  font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.total-price {
+  font-size: 32px;
+  color: hsl(25, 47%, 15%);
+  font-weight: 700;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.price-percentage {
+  font-size: 12px;
+  font-weight: 700;
+  color: hsl(25, 47%, 15%);
+  font-family: 'DM Sans', sans-serif;
+}
+
+.span-last-month {
+  font-size: 14px;
+  color: hsl(28, 10%, 53%);
+  font-weight: 300;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.coded-by-text {
+  padding: 15px 15px;
+  border: unset;
+  border-radius: 15px;
+  color: hsl(10, 79%, 65%);
+  z-index: 1;
+  position: relative;
+  font-weight: 1000;
+  font-size: 17px;
+  overflow: hidden;
+}
+
+.coded-by-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color:  hsl(10, 79%, 65%);
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
+  transition: all 250ms;
+}
+
+.coded-by-text:hover {
+  color: #fff;
+}
+
+.coded-by-text:hover::before {
+  width: 100%;
+}
+
+
+/* For Tablet View */
+@media screen and (min-device-width: 540px) and (max-device-width: 1024px) {
+
+}
+
+/* For Mobile Portrait View */
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+
+  .main-container {
+    width: auto;
+    margin: 5rem auto;
+  }
+
+  .balance-container {
+    background-color: #eb765d;
+    border-radius: 15px;
+    width: 100%;
+  }
+
+  .chart-container {
+    background-color: #fefcf6;
+    border-radius: 15px;
+    padding: 2rem;
+    width: 100%;
+    margin-top: 1rem    ;
+  }
+
+  .graph-wed {
+    background-color: #76B5BC;
+    height: 150px;
+    border-radius: 5px;
+    margin-top: 50px;
+    transition: opacity 0.3s
+  }
+
+  .graph-thur {
+    background-color: #eb765d;
+    height: 75px;
+    border-radius: 5px;
+    margin-top: 125px;
+    transition: opacity 0.3s
+  }
+  
+
+  .graph-wed:hover,
+    .graph-thur:hover {
+      display: none;
+    }
+
+    .price-hover-wed,
+    .price-hover-thur {
+      display: none;
+    }
+  
+}
+
+@media screen and (min-device-width: 481px) and (max-device-width: 767px) and (orientation: portrait) {
+
+}
+
+/* For Mobile Landscape View */
+@media screen and (max-device-width: 640px) and (orientation: landscape) {
+}
+
+/* For Mobile Phones Portrait or Landscape View */
+@media screen and (max-device-width: 640px) {
+}
+
+/* For iPhone 4 Portrait or Landscape View */
+@media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* For iPhone 5 Portrait or Landscape View */
+@media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2) {
+}
+
+/* For iPhone 6 and 6 plus Portrait or Landscape View *a/
+@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+}device-width: 375px) and (-webkit-min-device-pixel-ratio: 3) {
+}

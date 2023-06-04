@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Expenses chart component</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container main-container">
+      <div class="container balance-container">
+        <div class="row p-3">
+          <div class="col-6 col-lg-6">
+            <p class="balance-header">My balance</p>
+            <p class="balance-amount">$921.48</p>
+          </div>
+          <div class="col-6 col-lg-6">
+            <div class="d-flex justify-content-end mt-3">
+              <img src="images/logo.svg" alt="" height="50px" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container chart-container">
+        <p class="chart-heading">Spending - Last 7 days</p>
+        <div class="container-graphs">
+          <div class="row">
+            <div class="col g-3">
+              <div class="graph-mon"></div>
+              <p class="span-day">mon</p>
+            </div>
+            <div class="col g-3">
+              <div class="graph-tues"></div>
+              <p class="span-day">tue</p>
+            </div>
+            <div class="col g-3">
+              <span class="price-hover-wed">$52.36</span>
+              <div class="graph-wed"></div>
+              <p class="span-day">wed</p>
+            </div>
+            <div class="col g-3">
+              <span class="price-hover-thur">$31.07</span>
+              <div class="graph-thur"></div>
+              <p class="span-day">thu</p>
+            </div>
+            <div class="col g-3">
+              <div class="graph-fri"></div>
+              <p class="span-day">fri</p>
+            </div>
+            <div class="col g-3">
+              <div class="graph-sat"></div>
+              <p class="span-day">sat</p>
+            </div>
+            <div class="col g-3">
+              <div class="graph-sun"></div>
+              <p class="span-day">sun</p>
+            </div>
+          </div>
+        </div>
+
+        <hr class="separation-line" />
+
+        <div class="container p-0">
+          <span class="total-chart p-0">Total this month</span>
+          <div class="row">
+            <div class="col">
+              <span class="total-price">$478.33</span>
+            </div>
+            <div class="col">
+              <div class="d-flex justify-content-end">
+                <span class="price-percentage">+2.4%</span>
+              </div>
+              <div class="d-flex justify-content-end">
+                <span class="span-last-month">from last month</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="attribution text-center mt-3 mb-3 p-3">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          style="color: hsl(10, 79%, 65%)"
+          >Frontend Mentor</a
+        >, Coded by
+        <a href="https://github.com/BotInterpreters" class="coded-by-text"
+          >John Ericson Dulay</a
+        >
+      </div>
+    </div>
+
+    <script>
+      const graphWed = document.querySelector(".graph-wed");
+      const priceHoverWed = document.querySelector(".price-hover-wed");
+
+      graphWed.addEventListener("mouseenter", () => {
+        priceHoverWed.style.opacity = "1";
+      });
+
+      graphWed.addEventListener("mouseleave", () => {
+        priceHoverWed.style.opacity = "0";
+      });
+
+      const grapThur = document.querySelector(".graph-thur");
+      const priceHoverThur = document.querySelector(".price-hover-thur");
+
+      grapThur.addEventListener("mouseenter", () => {
+        priceHoverThur.style.opacity = "1";
+      });
+
+      grapThur.addEventListener("mouseleave", () => {
+        priceHoverThur.style.opacity = "0";
+      });
+    </script>
+
+ 
+  </body>
+</html>
